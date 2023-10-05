@@ -1,0 +1,269 @@
+/*******************************************************************************************
+  SIMPL+ Module Information
+  (Fill in comments below)
+*******************************************************************************************/
+/*
+Dealer Name:
+System Name:
+System Number:
+Programmer:
+Comments:
+*/
+
+/*******************************************************************************************
+  Compiler Directives
+  (Uncomment and declare compiler directives as needed)
+*******************************************************************************************/
+// #ENABLE_DYNAMIC
+// #SYMBOL_NAME ""
+// #HINT ""
+// #DEFINE_CONSTANT
+// #CATEGORY "" 
+// #PRINT_TO_TRACE
+// #DIGITAL_EXPAND 
+// #ANALOG_SERIAL_EXPAND 
+// #OUTPUT_SHIFT 
+// #HELP_PDF_FILE ""
+#DEFAULT_VOLATILE
+#ENABLE_STACK_CHECKING
+//#ENABLE_TRACE
+// #ENCODING_ASCII
+// #ENCODING_UTF16
+// #ENCODING_INHERIT_FROM_PARENT
+// #ENCODING_INHERIT_FROM_PROGRAM
+/*
+#HELP_BEGIN
+   (add additional lines of help lines)
+#HELP_END
+*/
+
+/*******************************************************************************************
+  Include Libraries
+  (Uncomment and include additional libraries as needed)
+*******************************************************************************************/
+// #CRESTRON_LIBRARY ""
+// #USER_LIBRARY ""
+
+/*******************************************************************************************
+  DIGITAL, ANALOG and SERIAL INPUTS and OUTPUTS
+  (Uncomment and declare inputs and outputs as needed)
+*******************************************************************************************/
+DIGITAL_INPUT all_on, all_off, _skip_, loads_stable, _skip_, inc_all_in_scene, _skip_, inc_in_scene[100]; 
+ANALOG_INPUT _skip_, scene_recall_num, scene_save_num, _skip_, num_zones,_skip_,_skip_, light_load[100];
+// STRING_INPUT 
+// BUFFER_INPUT 
+
+STRING_OUTPUT mod_msg$; 
+DIGITAL_OUTPUT _skip_, _skip_, _skip_, _skip_, light_preset_recall_go, _skip_,  _skip_, inc_in_scene_fb[100], _skip_;
+ANALOG_OUTPUT _skip_, _skip_, _skip_, _skip_, _skip_, light_load_preset[100];
+
+/*******************************************************************************************
+  SOCKETS
+  (Uncomment and define socket definitions as needed)
+*******************************************************************************************/
+// TCP_CLIENT
+// TCP_SERVER
+// UDP_SOCKET
+
+/*******************************************************************************************
+  Parameters
+  (Uncomment and declare parameters as needed)
+*******************************************************************************************/
+INTEGER_PARAMETER _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_,_skip_, _skip_, _skip_, 
+_skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, 
+_skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, 
+_skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_,_skip_, _skip_, _skip_, _skip_, _skip_,
+_skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_,
+_skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_,
+_skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_,
+_skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_,
+_skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_,
+_skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_,
+_skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_,
+_skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_,
+_skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_,
+_skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_,
+_skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_,
+_skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_,
+_skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, scene_default_level[24], _skip_;
+// SIGNED_INTEGER_PARAMETER
+// LONG_INTEGER_PARAMETER
+// SIGNED_LONG_INTEGER_PARAMETER
+STRING_PARAMETER StoragePath$[25], FileNameHeader$[25];
+                    
+
+
+INTEGER i, j, k, m, n, p, light_presets_in[100][2], light_presets_out[100][2], light_ramp_status[100];
+SIGNED_INTEGER nFileHandle, nFileError;
+STRING FileNameAndPath$[200];
+
+/*******************************************************************************************
+  Event Handlers
+  (Uncomment and declare additional event handlers as needed)
+*******************************************************************************************/
+THREADSAFE PUSH inc_in_scene
+{
+	i = GetLastModifiedArrayIndex();
+    inc_in_scene_fb[i] = !inc_in_scene_fb[i];
+	light_presets_in[i][2] = inc_in_scene_fb[i];
+}
+
+THREADSAFE PUSH loads_stable
+{
+	FOR (j = 1 to num_zones)
+		{
+		light_presets_in[j][1] = light_load[j];
+		}
+}
+       
+THREADSAFE PUSH all_on
+{
+	FOR (k = 1 to num_zones)
+		{
+		inc_in_scene_fb[k] = 1;
+		light_presets_in[k][2] = 1;
+		light_load_preset[k] = 65535;
+		}				
+	PULSE (10, light_preset_recall_go);
+}
+
+THREADSAFE PUSH all_off
+{
+	FOR (m = 1 to num_zones)
+		{
+		inc_in_scene_fb[m] = 1;
+		light_presets_in[m][2] = 1;
+		light_load_preset[m] = 0;
+		}				
+	PULSE (10, light_preset_recall_go);
+}
+
+
+
+
+THREADSAFE CHANGE scene_save_num
+{
+	MAKESTRING (mod_msg$, "Scene Save Started.\n");
+	FileNameAndPath$ = StoragePath$ + FileNameHeader$ + "-" + ITOA(scene_save_num) + ".dat";
+	StartFileOperations();
+    nFileHandle = FileOpen (FileNameAndPath$,_O_BINARY|_O_WRONLY|_O_CREAT|_O_TRUNC);
+	MAKESTRING (mod_msg$, "File Open code %d\n", nFileHandle);
+	If (nFileHandle >= 0)
+		{
+		nFileError = WriteIntegerArray(nFileHandle, light_presets_in);
+
+      	If (nFileError > 0)
+			MAKESTRING (mod_msg$, "Array written to file correctly.\n");
+		ELSE
+			MAKESTRING (mod_msg$, "Error code %d\n", nFileError);
+		}
+	FileClose(nFileHandle);
+	EndFileOperations();  
+}
+
+THREADSAFE CHANGE scene_recall_num
+{
+	MAKESTRING (mod_msg$, "Scene Recall Started.\n");
+	FileNameAndPath$ = StoragePath$ + FileNameHeader$ + "-" + ITOA(scene_recall_num) + ".dat";
+   	StartFileOperations();
+	nFileHandle = FileOpen (FileNameAndPath$,_O_BINARY|_O_RDONLY);
+	If (nFileHandle >= 0)
+		{
+		nFileError = ReadIntegerArray(nFileHandle, light_presets_out);
+
+      	If (nFileError > 0)
+			{
+			MAKESTRING (mod_msg$, "Array read from file correctly.\n");
+			FOR (n = 1 to num_zones)
+				{
+				inc_in_scene_fb[n] = light_presets_out[n][2];
+				light_presets_in[n][2] = light_presets_out[n][2];
+				//MAKESTRING (mod_msg$, "Zone %u Include %u\n", n, inc_in_scene_fb[n]);
+		        IF (inc_in_scene_fb[n] = 1 || inc_all_in_scene = 1)
+					{
+					light_load_preset[n] = light_presets_out[n][1];
+					}
+				ELSE
+					{
+                    light_load_preset[n] = light_presets_in[n][1];
+					}
+				}
+			PULSE (10, light_preset_recall_go);
+			}
+		ELSE
+			{
+			TRACE ( "Error code %d\n", nFileError);
+			}
+		}
+
+	ELSE
+		{
+		IF (scene_default_level[scene_recall_num] > 0)
+		{
+			FOR (n = 1 to num_zones)
+				{
+				inc_in_scene_fb[n] = 1;
+				light_presets_in[n][2] = 1;
+				light_load_preset[n] = scene_default_level[scene_recall_num];
+				}
+			PULSE (10, light_preset_recall_go);
+			}
+		}
+	FileClose(nFileHandle);
+	EndFileOperations();  	
+}
+
+
+
+
+/*
+EVENT
+{
+    // TODO:  Add code here
+}
+*/
+
+/*
+SOCKETCONNECT
+{
+    // TODO:  Add code here
+}
+*/
+
+/*
+SOCKETDISCONNECT
+{
+    // TODO:  Add code here
+}
+*/
+
+/*
+SOCKETRECEIVE
+{
+    // TODO:  Add code here
+}
+*/
+
+/*
+SOCKETSTATUS
+{
+    // TODO:  Add code here
+}
+*/
+
+/*******************************************************************************************
+  Main()
+  Uncomment and place one-time startup code here
+  (This code will get called when the system starts up)
+*******************************************************************************************/
+
+Function Main()
+{
+    WaitForInitializationComplete();
+	For (p = 1 to 100)
+		{
+        light_presets_in[p][1] = 0;
+        light_presets_in[p][2] = 1;
+		}
+}
+
