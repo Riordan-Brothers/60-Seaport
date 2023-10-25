@@ -1,0 +1,65 @@
+<Device Model="DIN-AP3">
+   <Network Type="Cresnet" Id="01">
+      <Device Model="CLX-2DIMU8,CLX-2DIMU8-277,CLXI-2DIMU8,CLXI-2DIMU8-277" DeviceId="06" Name="CLX-2DIMU8 (complete)"/>
+      <Device Model="CLX-2DIMU8,CLX-2DIMU8-277,CLXI-2DIMU8,CLXI-2DIMU8-277" DeviceId="07" Name="CLX-2DIMU8 (complete)"/>
+      <Device Model="C2N-CBD-P" DeviceId="11" Name="gbn"/>
+      <Device Model="C2N-CBD-P" DeviceId="12" Name="gbn"/>
+      <Device Model="C2N-CBD-P" DeviceId="13" Name="3FL Entrance - Not Reporting"/>
+      <Device Model="C2N-CBD-P" DeviceId="14" Name="Concession - Not Reporting"/>
+      <Device Model="C2N-CBD-P" DeviceId="15" Name="Support Kitchen"/>
+      <Device Model="GLX-DIM6" DeviceId="31" Name="GLX-DIM6 (complete)"/>
+      <Device Model="GLX-DIMFLV8" DeviceId="32" Name="GLX-DIMFLV8 (complete)"/>
+      <Device Model="GLX-DIMFLV8" DeviceId="33" Name="GLX-DIMFLV8 (complete)"/>
+      <Device Model="GLX-DIMFLV8" DeviceId="34" Name="GLX-DIMFLV8 (complete)"/>
+      <Device Model="GLX-DIMFLV8" DeviceId="35" Name="GLX-DIMFLV8 (complete)"/>
+      <Device Model="GL-EXP-DIMU-CN" DeviceId="41" Name="GL-EXP-DIMU-CN (complete)"/>
+      <Device Model="GL-EXP-DIMU-CN" DeviceId="42" Name="GL-EXP-DIMU-CN (complete)"/>
+      <Device Model="GL-EXP-DIMU-CN" DeviceId="43" Name="GL-EXP-DIMU-CN (complete)"/>
+      <Device Model="GL-EXP-DIMU-CN" DeviceId="44" Name="GL-EXP-DIMU-CN (complete)"/>
+      <Device Model="GL-EXP-DIMU-CN" DeviceId="45" Name="Press Room z04 (complete)"/>
+      <Device Model="GLPP-SWCN" DeviceId="51" Name="Area 15"/>
+      <Device Model="GLPP-SWCN" DeviceId="52" Name="Area 15"/>
+      <Device Model="GLPP-SWCN" DeviceId="53" Name="Area 15"/>
+      <Device Model="GLPP-SWCN" DeviceId="54" Name="Area 15"/>
+      <Device Model="GLPP-SWCN" DeviceId="55" Name="Area 15"/>
+      <Device Model="GLPP-SWCN" DeviceId="56" Name="Area 15"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="58" Name="Area 17 (completed)"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="59" Name="Area 18 (completed)"/>
+      <Device Model="GLPP-SWCN" DeviceId="5B" Name="Area 20"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="60" Name="Area 25"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="61" Name="Area 26"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="62" Name="Area 26"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="63" Name="Area 26 (2nd Floor Back of House)"/>
+      <Device Model="GLPP-SWCN" DeviceId="6D" Name="Area 36 -IT Closet"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="91" Name="Area 23"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="92" Name="Area 23"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="93" Name="Area 23"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="94" Name="Area 24"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="95" Name="Area 26"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="96" Name="Area 26"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="97" Name="Area 26"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="98" Name="Area 26"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="99" Name="Area 26"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="9A" Name="Area 26"/>
+      <Device Model="GLS-SIM" DeviceId="A1"/>
+   </Network>
+   <Network Type="Ethernet" Id="02">
+      <Device Model="TSW-770" DeviceId="04" Name="tsw01-770"/>
+      <Device Model="TSW-770" DeviceId="05" Name="tsw02-770"/>
+      <Device Model="Crestron_App" DeviceId="06" Name="Crestron App"/>
+      <Device Model="GLPAC-DIMFLV8" DeviceId="11" Name="GLPAC-01"/>
+      <Device Model="GLPAC-DIMFLV8" DeviceId="12" Name="GLPAC-02"/>
+      <Device Model="GLPAC-DIMFLV8" DeviceId="13" Name="GLPAC-03"/>
+      <Device Model="GLPAC-DIMFLV8" DeviceId="14" Name="GLPAC-04"/>
+      <Device Model="GLPAC-DIMFLV8" DeviceId="15" Name="GLPAC-05"/>
+      <Device Model="GLPAC-DIMFLV8" DeviceId="16" Name="GLPAC-06"/>
+      <Device Model="GLPAC-DIMFLV8" DeviceId="17" Name="GLPAC-07"/>
+      <Device Model="GLPAC-DIMFLV8" DeviceId="18" Name="GLPAC-08"/>
+      <Device Model="GLPAC-DIMFLV8" DeviceId="19" Name="GLPAC-09"/>
+      <Device Model="GLPAC-DIMFLV8" DeviceId="1A" Name="GLPAC-10"/>
+      <Device Model="GLPAC-DIMFLV8" DeviceId="1B" Name="GLPAC-11"/>
+      <Device Model="GLPAC-DIMFLV8" DeviceId="1C" Name="GLPAC-12"/>
+      <Device Model="GLPAC-DIMFLV8" DeviceId="1D" Name="GLPAC-13"/>
+      <Device Model="GLPAC-DIMFLV8" DeviceId="1E" Name="GLPAC-14"/>
+   </Network>
+</Device>

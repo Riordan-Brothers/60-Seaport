@@ -1,0 +1,7 @@
+<Device Model="GLPAC-DIMFLV8-PM">
+   <Network Type="Cresnet" Id="01">
+      <Device Model="GLI-DIMFLV8-R" DeviceId="03"/>
+      <Device Model="GLI-PM8" DeviceId="04"/>
+   </Network>
+   <Network Type="Ethernet" Id="02"/>
+</Device>

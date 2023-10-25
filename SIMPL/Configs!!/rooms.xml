@@ -234,7 +234,7 @@
 		<room_name>Auditorium 3</room_name>
 		<room_num>12</room_num>
 		<equip_ID>203</equip_ID>
-		<num_zones>6</num_zones>
+		<num_zones>7</num_zones>
 		<uses_presets>1</uses_presets>
 		<num_presets>5</num_presets>
 		<has_shades>0</has_shades>
@@ -507,10 +507,10 @@
 		<vac_mode>9</vac_mode>
 	</room>
 	<room roomID="room24">
-		<room_name>Lobby</room_name>
+		<room_name>Common Lobby</room_name>
 		<room_num>24</room_num>
 		<equip_ID>215</equip_ID>
-		<num_zones>5</num_zones>
+		<num_zones>4</num_zones>
 		<uses_presets>1</uses_presets>
 		<num_presets>8</num_presets>
 		<has_shades>0</has_shades>
@@ -530,32 +530,9 @@
 		<vac_mode>9</vac_mode>
 	</room>
 	<room roomID="room25">
-		<room_name>Bar</room_name>
+		<room_name>Theater Corridors</room_name>
 		<room_num>25</room_num>
 		<equip_ID>216</equip_ID>
-		<num_zones>3</num_zones>
-		<uses_presets>1</uses_presets>
-		<num_presets>8</num_presets>
-		<has_shades>0</has_shades>
-		<num_shades>0</num_shades>
-		<all_on_name>All On</all_on_name>
-		<all_off_name>All Off</all_off_name>
-		<preset01_name>Day</preset01_name>
-		<preset02_name>Evening</preset02_name>
-		<preset03_name>Night</preset03_name>
-		<preset04_name>Function</preset04_name>
-		<preset05_name>Preset 05</preset05_name>
-		<preset06_name>Preset 06</preset06_name>
-		<preset07_name>Preset 07</preset07_name>
-		<preset08_name>Preset 08</preset08_name>
-		<occ_timeout>600</occ_timeout>
-		<occ_mode>1</occ_mode>
-		<vac_mode>9</vac_mode>
-	</room>
-	<room roomID="room26">
-		<room_name>FOH Corr</room_name>
-		<room_num>26</room_num>
-		<equip_ID>217</equip_ID>
 		<num_zones>8</num_zones>
 		<uses_presets>1</uses_presets>
 		<num_presets>8</num_presets>
@@ -575,11 +552,34 @@
 		<occ_mode>1</occ_mode>
 		<vac_mode>9</vac_mode>
 	</room>
-	<room roomID="room29">
-		<room_name>Lounge</room_name>
+	<room roomID="room26">
+		<room_name>Press Room</room_name>
+		<room_num>26</room_num>
+		<equip_ID>217</equip_ID>
+		<num_zones>5</num_zones>
+		<uses_presets>1</uses_presets>
+		<num_presets>8</num_presets>
+		<has_shades>0</has_shades>
+		<num_shades>0</num_shades>
+		<all_on_name>All On</all_on_name>
+		<all_off_name>All Off</all_off_name>
+		<preset01_name>Day</preset01_name>
+		<preset02_name>Evening</preset02_name>
+		<preset03_name>Night</preset03_name>
+		<preset04_name>Function</preset04_name>
+		<preset05_name>Preset 05</preset05_name>
+		<preset06_name>Preset 06</preset06_name>
+		<preset07_name>Preset 07</preset07_name>
+		<preset08_name>Preset 08</preset08_name>
+		<occ_timeout>600</occ_timeout>
+		<occ_mode>1</occ_mode>
+		<vac_mode>9</vac_mode>
+	</room>
+	<room roomID="room27">
+		<room_name>Restrooms</room_name>
 		<room_num>29</room_num>
-		<equip_ID>220</equip_ID>
-		<num_zones>6</num_zones>
+		<equip_ID>218</equip_ID>
+		<num_zones>7</num_zones>
 		<uses_presets>1</uses_presets>
 		<num_presets>8</num_presets>
 		<has_shades>0</has_shades>
@@ -598,33 +598,10 @@
 		<occ_mode>1</occ_mode>
 		<vac_mode>9</vac_mode>
 	</room>
-	<room roomID="room30">
-		<room_name>Mens</room_name>
+	<room roomID="room28">
+		<room_name>Signage</room_name>
 		<room_num>30</room_num>
-		<equip_ID>221</equip_ID>
-		<num_zones>3</num_zones>
-		<uses_presets>1</uses_presets>
-		<num_presets>8</num_presets>
-		<has_shades>0</has_shades>
-		<num_shades>0</num_shades>
-		<all_on_name>All On</all_on_name>
-		<all_off_name>All Off</all_off_name>
-		<preset01_name>Day</preset01_name>
-		<preset02_name>Evening</preset02_name>
-		<preset03_name>Night</preset03_name>
-		<preset04_name>Function</preset04_name>
-		<preset05_name>Preset 05</preset05_name>
-		<preset06_name>Preset 06</preset06_name>
-		<preset07_name>Preset 07</preset07_name>
-		<preset08_name>Preset 08</preset08_name>
-		<occ_timeout>600</occ_timeout>
-		<occ_mode>1</occ_mode>
-		<vac_mode>9</vac_mode>
-	</room>
-	<room roomID="room31">
-		<room_name>Womens</room_name>
-		<room_num>31</room_num>
-		<equip_ID>222</equip_ID>
+		<equip_ID>219</equip_ID>
 		<num_zones>3</num_zones>
 		<uses_presets>1</uses_presets>
 		<num_presets>8</num_presets>

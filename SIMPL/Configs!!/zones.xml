@@ -356,8 +356,8 @@
 		<dali>0</dali>
 		<dimmable>0</dimmable>
 		<inUse>1</inUse>
-		<slew_rate>2</slew_rate>
-		<ramp_time>6</ramp_time>
+		<slew_rate>0</slew_rate>
+		<ramp_time>0</ramp_time>
 		<lower_bound>0</lower_bound>
 		<upper_bound>65535</upper_bound>
 		<on_level>65535</on_level>
@@ -388,8 +388,8 @@
 		<dali>0</dali>
 		<dimmable>0</dimmable>
 		<inUse>1</inUse>
-		<slew_rate>2</slew_rate>
-		<ramp_time>6</ramp_time>
+		<slew_rate>0</slew_rate>
+		<ramp_time>0</ramp_time>
 		<lower_bound>0</lower_bound>
 		<upper_bound>65535</upper_bound>
 		<on_level>65535</on_level>
@@ -404,8 +404,8 @@
 		<dali>0</dali>
 		<dimmable>0</dimmable>
 		<inUse>1</inUse>
-		<slew_rate>2</slew_rate>
-		<ramp_time>6</ramp_time>
+		<slew_rate>0</slew_rate>
+		<ramp_time>0</ramp_time>
 		<lower_bound>0</lower_bound>
 		<upper_bound>65535</upper_bound>
 		<on_level>65535</on_level>
@@ -703,6 +703,22 @@
 		<harvested>0</harvested>
 		<harvest_enable>0</harvest_enable>
 		<friendly_name>Corridor</friendly_name>
+	</zone>
+	<zone zoneID="room12_z07">
+		<dali>0</dali>
+		<dimmable>1</dimmable>
+		<inUse>1</inUse>
+		<slew_rate>2</slew_rate>
+		<ramp_time>6</ramp_time>
+		<lower_bound>0</lower_bound>
+		<upper_bound>65535</upper_bound>
+		<on_level>65535</on_level>
+		<off_level>0</off_level>
+		<raise_from_off>0</raise_from_off>
+		<RGB>0</RGB>
+		<harvested>0</harvested>
+		<harvest_enable>0</harvest_enable>
+		<friendly_name>Back Row</friendly_name>
 	</zone>
 	<zone zoneID="room13_z01">
 		<dali>0</dali>
@@ -1358,7 +1374,7 @@
 		<RGB>0</RGB>
 		<harvested>0</harvested>
 		<harvest_enable>0</harvest_enable>
-		<friendly_name>FL</friendly_name>
+		<friendly_name>Corridor</friendly_name>
 	</zone>
 	<zone zoneID="room19_z06">
 		<dali>0</dali>
@@ -1374,7 +1390,7 @@
 		<RGB>0</RGB>
 		<harvested>0</harvested>
 		<harvest_enable>0</harvest_enable>
-		<friendly_name>Corridor</friendly_name>
+		<friendly_name>FL</friendly_name>
 	</zone>
 	<zone zoneID="room24_z01">
 		<dali>0</dali>
@@ -1390,7 +1406,7 @@
 		<RGB>0</RGB>
 		<harvested>0</harvested>
 		<harvest_enable>0</harvest_enable>
-		<friendly_name>Wall Sconce</friendly_name>
+		<friendly_name>Recessed-1</friendly_name>
 	</zone>
 	<zone zoneID="room24_z02">
 		<dali>0</dali>
@@ -1406,7 +1422,7 @@
 		<RGB>0</RGB>
 		<harvested>0</harvested>
 		<harvest_enable>0</harvest_enable>
-		<friendly_name>Pendants</friendly_name>
+		<friendly_name>Iron Giant Track</friendly_name>
 	</zone>
 	<zone zoneID="room24_z03">
 		<dali>0</dali>
@@ -1422,7 +1438,7 @@
 		<RGB>0</RGB>
 		<harvested>0</harvested>
 		<harvest_enable>0</harvest_enable>
-		<friendly_name>Big LED Ring</friendly_name>
+		<friendly_name>Recessed-2</friendly_name>
 	</zone>
 	<zone zoneID="room24_z04">
 		<dali>0</dali>
@@ -1438,12 +1454,12 @@
 		<RGB>0</RGB>
 		<harvested>0</harvested>
 		<harvest_enable>0</harvest_enable>
-		<friendly_name>Chandelier</friendly_name>
+		<friendly_name>Escalator Lts</friendly_name>
 	</zone>
 	<zone zoneID="room24_z05">
 		<dali>0</dali>
 		<dimmable>1</dimmable>
-		<inUse>1</inUse>
+		<inUse>0</inUse>
 		<slew_rate>2</slew_rate>
 		<ramp_time>6</ramp_time>
 		<lower_bound>0</lower_bound>
@@ -1454,7 +1470,6 @@
 		<RGB>0</RGB>
 		<harvested>0</harvested>
 		<harvest_enable>0</harvest_enable>
-		<friendly_name>Track</friendly_name>
 	</zone>
 	<zone zoneID="room24_z06">
 		<dali>0</dali>
@@ -1470,7 +1485,6 @@
 		<RGB>0</RGB>
 		<harvested>0</harvested>
 		<harvest_enable>0</harvest_enable>
-		<friendly_name>Column LED</friendly_name>
 	</zone>
 	<zone zoneID="room25_z01">
 		<dali>0</dali>
@@ -1486,7 +1500,7 @@
 		<RGB>0</RGB>
 		<harvested>0</harvested>
 		<harvest_enable>0</harvest_enable>
-		<friendly_name>Bar Pendants</friendly_name>
+		<friendly_name>Artwork Track</friendly_name>
 	</zone>
 	<zone zoneID="room25_z02">
 		<dali>0</dali>
@@ -1502,7 +1516,7 @@
 		<RGB>0</RGB>
 		<harvested>0</harvested>
 		<harvest_enable>0</harvest_enable>
-		<friendly_name>Under Bar</friendly_name>
+		<friendly_name>Corridor Spot</friendly_name>
 	</zone>
 	<zone zoneID="room25_z03">
 		<dali>0</dali>
@@ -1518,7 +1532,87 @@
 		<RGB>0</RGB>
 		<harvested>0</harvested>
 		<harvest_enable>0</harvest_enable>
-		<friendly_name>Bar Track</friendly_name>
+		<friendly_name>Aud 1-4 Corr</friendly_name>
+	</zone>
+	<zone zoneID="room25_z04">
+		<dali>0</dali>
+		<dimmable>1</dimmable>
+		<inUse>1</inUse>
+		<slew_rate>2</slew_rate>
+		<ramp_time>6</ramp_time>
+		<lower_bound>0</lower_bound>
+		<upper_bound>65535</upper_bound>
+		<on_level>65535</on_level>
+		<off_level>0</off_level>
+		<raise_from_off>0</raise_from_off>
+		<RGB>0</RGB>
+		<harvested>0</harvested>
+		<harvest_enable>0</harvest_enable>
+		<friendly_name>RR Entry/ Elev Exit</friendly_name>
+	</zone>
+	<zone zoneID="room25_z05">
+		<dali>0</dali>
+		<dimmable>1</dimmable>
+		<inUse>1</inUse>
+		<slew_rate>2</slew_rate>
+		<ramp_time>6</ramp_time>
+		<lower_bound>0</lower_bound>
+		<upper_bound>65535</upper_bound>
+		<on_level>65535</on_level>
+		<off_level>0</off_level>
+		<raise_from_off>0</raise_from_off>
+		<RGB>0</RGB>
+		<harvested>0</harvested>
+		<harvest_enable>0</harvest_enable>
+		<friendly_name>Aud Entry Pends</friendly_name>
+	</zone>
+	<zone zoneID="room25_z06">
+		<dali>0</dali>
+		<dimmable>1</dimmable>
+		<inUse>1</inUse>
+		<slew_rate>2</slew_rate>
+		<ramp_time>6</ramp_time>
+		<lower_bound>0</lower_bound>
+		<upper_bound>65535</upper_bound>
+		<on_level>65535</on_level>
+		<off_level>0</off_level>
+		<raise_from_off>0</raise_from_off>
+		<RGB>0</RGB>
+		<harvested>0</harvested>
+		<harvest_enable>0</harvest_enable>
+		<friendly_name>Aud 7-10 Corr</friendly_name>
+	</zone>
+	<zone zoneID="room25_z07">
+		<dali>0</dali>
+		<dimmable>1</dimmable>
+		<inUse>1</inUse>
+		<slew_rate>2</slew_rate>
+		<ramp_time>6</ramp_time>
+		<lower_bound>0</lower_bound>
+		<upper_bound>65535</upper_bound>
+		<on_level>65535</on_level>
+		<off_level>0</off_level>
+		<raise_from_off>0</raise_from_off>
+		<RGB>0</RGB>
+		<harvested>0</harvested>
+		<harvest_enable>0</harvest_enable>
+		<friendly_name>Aud Numbers</friendly_name>
+	</zone>
+	<zone zoneID="room25_z08">
+		<dali>0</dali>
+		<dimmable>1</dimmable>
+		<inUse>1</inUse>
+		<slew_rate>2</slew_rate>
+		<ramp_time>6</ramp_time>
+		<lower_bound>0</lower_bound>
+		<upper_bound>65535</upper_bound>
+		<on_level>65535</on_level>
+		<off_level>0</off_level>
+		<raise_from_off>0</raise_from_off>
+		<RGB>0</RGB>
+		<harvested>0</harvested>
+		<harvest_enable>0</harvest_enable>
+		<friendly_name>Dome Pendants</friendly_name>
 	</zone>
 	<zone zoneID="room26_z01">
 		<dali>0</dali>
@@ -1534,7 +1628,7 @@
 		<RGB>0</RGB>
 		<harvested>0</harvested>
 		<harvest_enable>0</harvest_enable>
-		<friendly_name>Wall Sconce</friendly_name>
+		<friendly_name>Bar Pendants</friendly_name>
 	</zone>
 	<zone zoneID="room26_z02">
 		<dali>0</dali>
@@ -1550,7 +1644,7 @@
 		<RGB>0</RGB>
 		<harvested>0</harvested>
 		<harvest_enable>0</harvest_enable>
-		<friendly_name>Pendants</friendly_name>
+		<friendly_name>Soffit</friendly_name>
 	</zone>
 	<zone zoneID="room26_z03">
 		<dali>0</dali>
@@ -1566,7 +1660,7 @@
 		<RGB>0</RGB>
 		<harvested>0</harvested>
 		<harvest_enable>0</harvest_enable>
-		<friendly_name>Big LED Ring</friendly_name>
+		<friendly_name>Ice Room/ Stairs</friendly_name>
 	</zone>
 	<zone zoneID="room26_z04">
 		<dali>0</dali>
@@ -1582,7 +1676,7 @@
 		<RGB>0</RGB>
 		<harvested>0</harvested>
 		<harvest_enable>0</harvest_enable>
-		<friendly_name>Chandelier</friendly_name>
+		<friendly_name>Under Bar</friendly_name>
 	</zone>
 	<zone zoneID="room26_z05">
 		<dali>0</dali>
@@ -1598,9 +1692,9 @@
 		<RGB>0</RGB>
 		<harvested>0</harvested>
 		<harvest_enable>0</harvest_enable>
-		<friendly_name>Track</friendly_name>
+		<friendly_name>Bar Track</friendly_name>
 	</zone>
-	<zone zoneID="room26_z06">
+	<zone zoneID="room27_z01">
 		<dali>0</dali>
 		<dimmable>1</dimmable>
 		<inUse>1</inUse>
@@ -1614,9 +1708,9 @@
 		<RGB>0</RGB>
 		<harvested>0</harvested>
 		<harvest_enable>0</harvest_enable>
-		<friendly_name>Column LED</friendly_name>
+		<friendly_name>Mirror Lights</friendly_name>
 	</zone>
-	<zone zoneID="room26_z07">
+	<zone zoneID="room27_z02">
 		<dali>0</dali>
 		<dimmable>1</dimmable>
 		<inUse>1</inUse>
@@ -1630,9 +1724,9 @@
 		<RGB>0</RGB>
 		<harvested>0</harvested>
 		<harvest_enable>0</harvest_enable>
-		<friendly_name>Track</friendly_name>
+		<friendly_name>Mens Zone 1</friendly_name>
 	</zone>
-	<zone zoneID="room26_z08">
+	<zone zoneID="room27_z03">
 		<dali>0</dali>
 		<dimmable>1</dimmable>
 		<inUse>1</inUse>
@@ -1646,9 +1740,9 @@
 		<RGB>0</RGB>
 		<harvested>0</harvested>
 		<harvest_enable>0</harvest_enable>
-		<friendly_name>Column LED</friendly_name>
+		<friendly_name>Mens Zone 2</friendly_name>
 	</zone>
-	<zone zoneID="room29_z01">
+	<zone zoneID="room27_z04">
 		<dali>0</dali>
 		<dimmable>1</dimmable>
 		<inUse>1</inUse>
@@ -1662,9 +1756,9 @@
 		<RGB>0</RGB>
 		<harvested>0</harvested>
 		<harvest_enable>0</harvest_enable>
-		<friendly_name>Wall Sconce</friendly_name>
+		<friendly_name>Mens Zone 3</friendly_name>
 	</zone>
-	<zone zoneID="room29_z02">
+	<zone zoneID="room27_z05">
 		<dali>0</dali>
 		<dimmable>1</dimmable>
 		<inUse>1</inUse>
@@ -1678,9 +1772,9 @@
 		<RGB>0</RGB>
 		<harvested>0</harvested>
 		<harvest_enable>0</harvest_enable>
-		<friendly_name>Pendants</friendly_name>
+		<friendly_name>Womens Zone 1</friendly_name>
 	</zone>
-	<zone zoneID="room29_z03">
+	<zone zoneID="room27_z06">
 		<dali>0</dali>
 		<dimmable>1</dimmable>
 		<inUse>1</inUse>
@@ -1694,9 +1788,9 @@
 		<RGB>0</RGB>
 		<harvested>0</harvested>
 		<harvest_enable>0</harvest_enable>
-		<friendly_name>Big LED Ring</friendly_name>
+		<friendly_name>Womens Zone 2</friendly_name>
 	</zone>
-	<zone zoneID="room29_z04">
+	<zone zoneID="room27_z07">
 		<dali>0</dali>
 		<dimmable>1</dimmable>
 		<inUse>1</inUse>
@@ -1710,14 +1804,14 @@
 		<RGB>0</RGB>
 		<harvested>0</harvested>
 		<harvest_enable>0</harvest_enable>
-		<friendly_name>Chandelier</friendly_name>
+		<friendly_name>Womens Zone 3</friendly_name>
 	</zone>
-	<zone zoneID="room29_z05">
+	<zone zoneID="room28_z01">
 		<dali>0</dali>
-		<dimmable>1</dimmable>
+		<dimmable>0</dimmable>
 		<inUse>1</inUse>
-		<slew_rate>2</slew_rate>
-		<ramp_time>6</ramp_time>
+		<slew_rate>0</slew_rate>
+		<ramp_time>0</ramp_time>
 		<lower_bound>0</lower_bound>
 		<upper_bound>65535</upper_bound>
 		<on_level>65535</on_level>
@@ -1726,14 +1820,14 @@
 		<RGB>0</RGB>
 		<harvested>0</harvested>
 		<harvest_enable>0</harvest_enable>
-		<friendly_name>Track</friendly_name>
+		<friendly_name>Box Off/ RR signs</friendly_name>
 	</zone>
-	<zone zoneID="room29_z06">
+	<zone zoneID="room28_z02">
 		<dali>0</dali>
-		<dimmable>1</dimmable>
+		<dimmable>0</dimmable>
 		<inUse>1</inUse>
-		<slew_rate>2</slew_rate>
-		<ramp_time>6</ramp_time>
+		<slew_rate>0</slew_rate>
+		<ramp_time>0</ramp_time>
 		<lower_bound>0</lower_bound>
 		<upper_bound>65535</upper_bound>
 		<on_level>65535</on_level>
@@ -1742,14 +1836,14 @@
 		<RGB>0</RGB>
 		<harvested>0</harvested>
 		<harvest_enable>0</harvest_enable>
-		<friendly_name>Column LED</friendly_name>
+		<friendly_name>Small Ext Sign</friendly_name>
 	</zone>
-	<zone zoneID="room30_z01">
+	<zone zoneID="room28_z03">
 		<dali>0</dali>
-		<dimmable>1</dimmable>
+		<dimmable>0</dimmable>
 		<inUse>1</inUse>
-		<slew_rate>2</slew_rate>
-		<ramp_time>6</ramp_time>
+		<slew_rate>0</slew_rate>
+		<ramp_time>0</ramp_time>
 		<lower_bound>0</lower_bound>
 		<upper_bound>65535</upper_bound>
 		<on_level>65535</on_level>
@@ -1758,92 +1852,6 @@
 		<RGB>0</RGB>
 		<harvested>0</harvested>
 		<harvest_enable>0</harvest_enable>
-		<friendly_name>Wall Sconce</friendly_name>
+		<friendly_name>Large Exterior Sign</friendly_name>
 	</zone>
-	<zone zoneID="room30_z02">
-		<dali>0</dali>
-		<dimmable>1</dimmable>
-		<inUse>1</inUse>
-		<slew_rate>2</slew_rate>
-		<ramp_time>6</ramp_time>
-		<lower_bound>0</lower_bound>
-		<upper_bound>65535</upper_bound>
-		<on_level>65535</on_level>
-		<off_level>0</off_level>
-		<raise_from_off>0</raise_from_off>
-		<RGB>0</RGB>
-		<harvested>0</harvested>
-		<harvest_enable>0</harvest_enable>
-		<friendly_name>Pendants</friendly_name>
-	</zone>
-	<zone zoneID="room30_z03">
-		<dali>0</dali>
-		<dimmable>1</dimmable>
-		<inUse>1</inUse>
-		<slew_rate>2</slew_rate>
-		<ramp_time>6</ramp_time>
-		<lower_bound>0</lower_bound>
-		<upper_bound>65535</upper_bound>
-		<on_level>65535</on_level>
-		<off_level>0</off_level>
-		<raise_from_off>0</raise_from_off>
-		<RGB>0</RGB>
-		<harvested>0</harvested>
-		<harvest_enable>0</harvest_enable>
-		<friendly_name>Big LED Ring</friendly_name>
-	</zone>
-	<zone zoneID="room31_z01">
-		<dali>0</dali>
-		<dimmable>1</dimmable>
-		<inUse>1</inUse>
-		<slew_rate>2</slew_rate>
-		<ramp_time>6</ramp_time>
-		<lower_bound>0</lower_bound>
-		<upper_bound>65535</upper_bound>
-		<on_level>65535</on_level>
-		<off_level>0</off_level>
-		<raise_from_off>0</raise_from_off>
-		<RGB>0</RGB>
-		<harvested>0</harvested>
-		<harvest_enable>0</harvest_enable>
-		<friendly_name>Wall Sconce</friendly_name>
-	</zone>
-	<zone zoneID="room31_z02">
-		<dali>0</dali>
-		<dimmable>1</dimmable>
-		<inUse>1</inUse>
-		<slew_rate>2</slew_rate>
-		<ramp_time>6</ramp_time>
-		<lower_bound>0</lower_bound>
-		<upper_bound>65535</upper_bound>
-		<on_level>65535</on_level>
-		<off_level>0</off_level>
-		<raise_from_off>0</raise_from_off>
-		<RGB>0</RGB>
-		<harvested>0</harvested>
-		<harvest_enable>0</harvest_enable>
-		<friendly_name>Pendants</friendly_name>
-	</zone>
-	<zone zoneID="room31_z03">
-		<dali>0</dali>
-		<dimmable>1</dimmable>
-		<inUse>1</inUse>
-		<slew_rate>2</slew_rate>
-		<ramp_time>6</ramp_time>
-		<lower_bound>0</lower_bound>
-		<upper_bound>65535</upper_bound>
-		<on_level>65535</on_level>
-		<off_level>0</off_level>
-		<raise_from_off>0</raise_from_off>
-		<RGB>0</RGB>
-		<harvested>0</harvested>
-		<harvest_enable>0</harvest_enable>
-		<friendly_name>Big LED Ring</friendly_name>
-	</zone>
-	<zone/>
-	<zone/>
-	<zone/>
-	<zone/>
-	<zone/>
-	<zone/>
 </file>
